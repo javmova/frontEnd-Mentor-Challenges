@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --bg-color: #defffe;
+    --main-color: hsl(0, 0%, 100%)
+}
+
+body{
+    background: var(--bg-color);
+}
+
+.container{
+    width: 375px;
+    margin: auto;
+    background: var(--main-color);
+}
+
+.container img{
+    width: 100%;
+}
+
+section{
+    padding: 30px;
+}
