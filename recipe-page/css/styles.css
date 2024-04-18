@@ -13,13 +13,13 @@ body{
     background: var(--bg-color);
 }
 
-.container{
+main{
     width: 375px;
     margin: auto;
     background: var(--main-color);
 }
 
-.container img{
+main img{
     width: 100%;
 }
 
