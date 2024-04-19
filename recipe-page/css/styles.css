@@ -4,6 +4,26 @@
     padding: 0;
 }
 
+/* young-serif-latin-400-normal */
+@font-face {
+    font-family: 'Young Serif';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/young-serif@latest/latin-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/young-serif@latest/latin-400-normal.woff) format('woff');
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+  }
+
+/* outfit-latin-wght-normal */
+@font-face {
+    font-family: 'Outfit Variable';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/outfit:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+  }
+
 :root {
     --nutmeg: hsl(14, 45%, 36%);
     --dark-raspberry: hsl(332, 51%, 32%);
@@ -30,7 +50,7 @@ h2 {
 }
 
 h1 {
-    padding: 20px;
+    
     color: var(--dark-charcoal);
 }
 
@@ -44,27 +64,71 @@ main {
     width: 375px;
     margin: auto;
     background: var(--white);
+   
 
 }
 
 main img {
     width: 100%;
+    
 }
+
 
 .preparation-time {
     background: var(--rose-white);
+    border-bottom: none;
+    
+    margin: auto;
+    border-radius: 1rem;
 
     & h2 {
         font-family: "Outfit", sans-serif;
         color: var(--dark-raspberry);
     }
+
+    & ul li::marker{
+        color: var(--dark-raspberry);
+    }
 }
 
-section {
-    padding: 50px;
+section {   
+   
+    padding: 20px;
+    position: relative;
+    /* border-bottom: .5px inset var(--light-grey); */
+    
+}
+
+section::after{
+    content: ''; /* Contenido del pseudo-elemento */
+    position: absolute; /* Posicionamiento absoluto */
+    left: 20px; /* Alineado al borde izquierdo */
+    right: 20px; /* Alineado al borde izquierdo */
+    bottom: 0; /* Alineado al borde inferior */
+
+    
+    border-bottom: 1px solid black; /* Borde inferior */
+}
+
+ul li::marker, ol li::marker{
+    color: var(--nutmeg);
+}
+
+ol li::marker{
+    font-weight: 600;
+}
+
+ul, ol{
+    list-style-position: inside;
 }
 
 table {
+
+    & tr{
+        
+        border-bottom: .5px solid var(--light-grey);
+    }
+
     & th{
         font-weight: 400;
     }
