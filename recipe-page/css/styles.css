@@ -43,15 +43,28 @@ body {
     background: var(--light-grey);
 }
 
+p{
+    width: 315px;
+    margin: auto;
+    margin-bottom: 1.7em;
+    line-height: 1.5em;
+}
+
 h1,
 h2 {
     font-family: "Young Serif", serif;
+    font-weight: 400;
     color: var(--nutmeg);
+    padding-bottom: 20px;
 }
 
 h1 {
-    
+    padding-left: 30px;
     color: var(--dark-charcoal);
+}
+h3{
+    color: var(--dark-raspberry);
+    padding-bottom: 20px;
 }
 
 span {
@@ -76,8 +89,8 @@ main img {
 
 .preparation-time {
     background: var(--rose-white);
-    border-bottom: none;
-    
+    border-bottom: none; 
+    padding: 20px;
     margin: auto;
     border-radius: 1rem;
 
@@ -87,27 +100,24 @@ main img {
     }
 
     & ul li::marker{
+        font-size: 12px;
         color: var(--dark-raspberry);
     }
 }
 
 section {   
    
-    padding: 20px;
-    position: relative;
-    /* border-bottom: .5px inset var(--light-grey); */
+    width: 315px;
+    margin: auto;
+    border-bottom: .5px inset var(--light-grey);
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+
     
 }
 
-section::after{
-    content: ''; /* Contenido del pseudo-elemento */
-    position: absolute; /* Posicionamiento absoluto */
-    left: 20px; /* Alineado al borde izquierdo */
-    right: 20px; /* Alineado al borde izquierdo */
-    bottom: 0; /* Alineado al borde inferior */
-
-    
-    border-bottom: 1px solid black; /* Borde inferior */
+.nutrition{
+    border-bottom: none;
 }
 
 ul li::marker, ol li::marker{
@@ -120,21 +130,47 @@ ol li::marker{
 
 ul, ol{
     list-style-position: inside;
+    
+}
+li{
+    /* margin-bottom: 1.2em; */
+    line-height: 2em;
 }
 
 table {
-
-    & tr{
-        
-        border-bottom: .5px solid var(--light-grey);
-    }
-
+    text-align: justify;
+    padding: 20px;
+    border-collapse: collapse;
+    
     & th{
         font-weight: 400;
+        padding: 15px 80px 15px 40px;
+        
     }
     
     & td {
         color: var(--nutmeg);
         font-weight: 700;
+        padding: 10px;
+        padding: 15px 80px 15px 0px;
+        
+    }
+}
+tr:not(:last-child)  {
+    border-bottom: 1px solid var(--light-grey); /* Aplica borde inferior a todas las filas excepto a la última */
+}
+
+footer{
+    margin-top: 30px;
+    background: var(--wenge-brown);
+    color: var(--light-grey);
+    padding: 15px 10px;
+    text-align: center;
+    & a{
+        color: var(--light-grey);
+        &:hover{
+          color: var(--white);
+          border-bottom: none;
+        }
     }
 }
