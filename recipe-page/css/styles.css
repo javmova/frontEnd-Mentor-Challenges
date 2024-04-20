@@ -40,7 +40,7 @@ body {
 
     font-family: "Outfit", sans-serif;
     color: var(--wenge-brown);
-    background: var(--light-grey);
+    background: var(--eggshell);
 }
 
 p{
@@ -166,7 +166,6 @@ table {
     & td {
         color: var(--nutmeg);
         font-weight: 700;
-        padding: 10px;
         padding: 15px 80px 15px 0px;
         
     }
@@ -186,9 +185,58 @@ footer{
         &:hover{
           color: var(--white);
           border-bottom: none;
+          text-decoration: none;
         }
     }
 }
 
 
+/*------------------- media query ---------------------------*/
 
+@media  (width >= 792px) {
+   
+    main{
+        width: 735px;
+        padding: 40px;
+        margin: 120px auto;
+        border-radius: 1em;
+        position: relative;
+    }
+
+    img{
+        border-radius: 1em;
+    }
+
+    h1{
+        padding: 0;
+    }
+
+    p{
+        width: 650px;
+    }
+
+    section{
+        width: 650px;
+    }
+
+    table th{
+        
+        padding: 15px 40px;
+    }
+
+    table td{
+        /* padding-left: 300px; */
+        padding: 15px 200px;
+        
+    }
+
+    footer{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 735px;
+        border-radius: 0 0 1em 1em;
+    }
+
+  }
+  
