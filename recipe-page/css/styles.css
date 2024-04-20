@@ -120,22 +120,37 @@ section {
     border-bottom: none;
 }
 
+/*---------- Listas ------------------------------------------*/
+
 ul li::marker, ol li::marker{
     color: var(--nutmeg);
+    
 }
 
 ol li::marker{
     font-weight: 600;
+    position: absolute;
+    text-align: center;
 }
 
-ul, ol{
-    list-style-position: inside;
-    
+ul li::marker{
+    font-size: 12px;;
 }
+
+
 li{
-    /* margin-bottom: 1.2em; */
-    line-height: 2em;
+   
+    line-height: 1.65em;
+    padding-left: 15px;
+    margin-left: 15px;
+   
 }
+
+li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+/*---------- Tablas ------------------------------------------------*/
 
 table {
     text-align: justify;
@@ -174,3 +189,6 @@ footer{
         }
     }
 }
+
+
+
