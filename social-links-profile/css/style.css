@@ -63,13 +63,14 @@ address{
     color: var(--green);
     font-style: normal;
     font-weight: 600;
-
+    
 }
 
 h2{
     font-size: 14px;
     font-weight: 400;
     margin-top: 24px;
+    margin-bottom: 24px;
 }
 
 ul li{
