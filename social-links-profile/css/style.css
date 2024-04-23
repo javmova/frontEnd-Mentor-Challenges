@@ -39,7 +39,7 @@ body{
 main{
     background: var(--dark-grey);
     max-width: 320px;
-    margin:6% auto;
+    margin: auto;
     padding: 24px;
     border-radius: .7em;
 
@@ -98,11 +98,12 @@ ul li a{
 
 
 footer{
+    
     padding: 7px;
     background: var(--grey);
     width: 320px;
     font-size: 10px;
-    margin: auto;
+    margin:10px auto;
     border-radius: 0 1em;
     & a{
         color: var(--white);
@@ -124,5 +125,6 @@ footer{
     footer{
         font-size: 12px;
         padding: 14px;
+        margin: 20px auto;
     }
 }
