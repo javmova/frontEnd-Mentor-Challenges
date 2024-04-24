@@ -32,9 +32,10 @@ main .contenedorQr img {
 main .contenedorQr .texto {
   font-size: 15px;
 }
-main .contenedorQr .texto h2 {
+main .contenedorQr .texto h1 {
   font-weight: 700;
   text-align: center;
+  font-size: 1.5em;
   margin: 17px;
 }
 main .contenedorQr .texto p {
