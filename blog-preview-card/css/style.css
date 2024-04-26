@@ -22,8 +22,85 @@
     --Black: hsl(0, 0%, 7%);
 }
 
+html {
+    height: 100vh;
+}
+
 body {
     font-family: 'Figtree Variable', 'arial', sans-serif;
+    background: var(--primary);
+    height: 100%;
+    align-content: center;
+}
+
+
+article {
+    background: var(--White);
+    max-width: 320px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 1em;
+    position: relative;
+    border: 1px solid var(--Black);
+    box-shadow: 7px 7px  var(--Black);
+
+    /* &::before {
+        content: "";
+        position: absolute;
+        right: -20px;
+        bottom: -20px;
+        width: 320px;
+        height: 500px;
+        background: var(--Black);
+        color: #000000;
+        font-size: 14px;
+        z-index: -1;
+    } */
+
+}
+
+/*parece que tiene una máscara*/
+.img-article {
+    border-radius: 1em;
+    width: 100%;
+}
+
+.badge{
+    margin: 20px auto;
+    background: var(--primary);
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: .5em;
+    font-weight: 800;
+}
+
+h1{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.body-article {
+    color: var(--Grey);
+    margin-bottom: 20px;
+}
+
+img{
+    width: 20%;
+}
+
+.container-writer{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.writer{
+    font-weight: 800;
+    
+}
+
+footer{
+    margin-top: 20px;
 }
 
 .attribution {
