@@ -24,6 +24,8 @@
 
 html {
     height: 100vh;
+    font-size: calc(1rem + .05vw);
+    
 }
 
 body {
@@ -31,6 +33,7 @@ body {
     background: var(--primary);
     height: 100%;
     align-content: center;
+    font-size: 1rem;
 }
 
 
@@ -42,27 +45,33 @@ article {
     border-radius: 1em;
     position: relative;
     border: 1px solid var(--Black);
-    box-shadow: 7px 7px  var(--Black);
-
-    /* &::before {
-        content: "";
-        position: absolute;
-        right: -20px;
-        bottom: -20px;
-        width: 320px;
-        height: 500px;
-        background: var(--Black);
-        color: #000000;
-        font-size: 14px;
-        z-index: -1;
-    } */
+    
 
 }
 
+.box-shadow{
+    box-shadow: 7px 7px  var(--Black);
+}
+
 /*parece que tiene una máscara*/
-.img-article {
+.container-img-article{
+    width: 280px;
+    height: 200px;
+    overflow: hidden;
     border-radius: 1em;
+    
+
+}
+
+.img-article {
+
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+ 
+    
+
 }
 
 .badge{
@@ -72,42 +81,70 @@ article {
     padding: 5px 10px;
     border-radius: .5em;
     font-weight: 800;
+    font-size: .8rem;
 }
 
-h1{
-    font-size: 20px;
+h2{
+    margin: 1em auto;
+    font-size: 1.3rem;
     font-weight: 800;
+}
+
+h2 a{
+   
+    text-decoration: none;
+    color: var(--Black);
+        &:hover{
+            color: var(--primary);
+        }
+    
 }
 
 .body-article {
     color: var(--Grey);
     margin-bottom: 20px;
+    line-height: 1.5em;
 }
 
-img{
-    width: 20%;
-}
 
-.container-writer{
+figure{
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.writer{
+figure img{
+    width: 12%;
+}
+
+figcaption{
     font-weight: 800;
     
 }
 
-footer{
-    margin-top: 20px;
-}
+
 
 .attribution {
-    font-size: 11px;
+    font-size: .7rem;
     text-align: center;
+    margin: 20px auto auto auto;
+    background: #fff;
+    max-width: 320px;
+    padding: 5px;
+    border-radius: 1em;
+    border: 1px solid var(--Black);
+   
+  
+    
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: hsl(228, 94%, 55%);
+    font-weight: 700;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+        color: var(--Black);
+    }
 }
+
