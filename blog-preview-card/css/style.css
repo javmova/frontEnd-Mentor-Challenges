@@ -39,7 +39,9 @@ body {
 
 article {
     background: var(--White);
-    max-width: 320px;
+    min-width: 320px;
+    max-width: 380px;
+    width: 27%;
     margin: auto;
     padding: 20px;
     border-radius: 1em;
@@ -55,7 +57,7 @@ article {
 
 /*parece que tiene una máscara*/
 .container-img-article{
-    width: 280px;
+    min-width: 280px;
     height: 200px;
     overflow: hidden;
     border-radius: 1em;
