@@ -39,11 +39,11 @@ body {
 
 article {
     background: var(--White);
-    min-width: 320px;
-    max-width: 380px;
+    min-width: 327px;
+    max-width: 384px;
     width: 27%;
     margin: auto;
-    padding: 20px;
+    padding: 24px;
     border-radius: 1em;
     position: relative;
     border: 1px solid var(--Black);
@@ -57,11 +57,11 @@ article {
 
 /*parece que tiene una máscara*/
 .container-img-article{
-    min-width: 280px;
+    min-width: 279px;
     height: 200px;
     overflow: hidden;
     border-radius: 1em;
-    
+    margin-bottom: 24px;
 
 }
 
@@ -77,7 +77,7 @@ article {
 }
 
 .badge{
-    margin: 20px auto;
+    margin: auto auto 24px auto;
     background: var(--primary);
     display: inline-block;
     padding: 5px 10px;
@@ -87,7 +87,7 @@ article {
 }
 
 h2{
-    margin: 1em auto;
+    margin: 24px auto;
     font-size: 1.3rem;
     font-weight: 800;
 }
@@ -104,7 +104,7 @@ h2 a{
 
 .body-article {
     color: var(--Grey);
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     line-height: 1.5em;
 }
 
@@ -129,7 +129,7 @@ figcaption{
 .attribution {
     font-size: .7rem;
     text-align: center;
-    margin: 20px auto auto auto;
+    margin: 24px auto auto auto;
     background: #fff;
     max-width: 320px;
     padding: 5px;
