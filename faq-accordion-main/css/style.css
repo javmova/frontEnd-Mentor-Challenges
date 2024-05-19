@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --lightPink: hsl(275, 100%, 97%);
+    --grayishPurple: hsl(292, 16%, 49%);
+    --darkPurple: hsl(292, 42%, 14%);
+    --hoverFont: hsl(279, 81%, 47%);
+}
+
+/* work-sans-latin-wght-normal */
+@font-face {
+    font-family: 'Work Sans Variable';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/work-sans:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    font-family: 'Work Sans Variable', Arial, Helvetica, sans-serif;
+    background: var(--lightPink);
+    background-image: url(../assets/images/background-pattern-mobile.svg);
+    background-repeat: repeat-x;
+    /* background-position:  center 20%; */
+    /* background-size: 500px; */
+    /*TODO: poner la rparte de arriba del fondo la imagen y la parte de abajo el color*/
+    height: 100%;
+    align-content: center;
+}
+
+main {
+    max-width: 327px;
+    margin: auto;
+    padding: 24px;
+    border-radius: .5em;
+    background: var(--white);
+}
+
+h2 {
+    font-size: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    font-weight: 700;
+
+    &::before {
+        /* content: url(../assets/images/icon-star.svg); */
+        content: "";
+        background-image: url(../assets/images/icon-star.svg);
+        width: 30px;
+        height: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+}
+
+
+
+dt {
+    color: var(--darkPurple);
+    font-weight: 700;
+    border-top: 1px solid var(--lightPink);
+    display: flex;
+    gap: 24px;
+    justify-content: space-around;
+    align-items: center;
+
+    padding-top: 24px;
+    /* padding-right: 56px; */
+    margin-top: 24px;
+    cursor: pointer;
+
+    &:first-of-type {
+        border-top: none;
+    }
+
+    &:hover {
+        color: var(--hoverFont);
+    }
+
+    &::after {
+        content: url(../assets/images/icon-plus.svg);
+        /* position: absolute;
+        right: 0;
+        top: 40%; */
+
+
+    }
+}
+
+.mostrar {
+    display: block;
+}
+
+dd {
+    /* display: none; */
+    line-height: 1.3em;
+    margin-top: 20px;
+    color: var(--grayishPurple);
+}
+
+/* Feel free to remove these styles or customise in your own stylesheet 👍 */
+footer {
+    margin-top: 48px;
+    /* padding: 24px; */
+    font-size: 11px;
+    text-align: center;
+    /* background: var(--white); */
+}
+
+footer a {
+    color: hsl(228, 45%, 44%);
+    font-weight: 600;
+
+    &:hover {
+        color: var(--hoverFont);
+        text-decoration: none;
+    }
+}
