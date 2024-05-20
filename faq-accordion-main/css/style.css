@@ -9,7 +9,7 @@
     --lightPink: hsl(275, 100%, 97%);
     --grayishPurple: hsl(292, 16%, 49%);
     --darkPurple: hsl(292, 42%, 14%);
-    --hoverFont: hsl(279, 81%, 47%);
+    --hoverText: hsl(279, 81%, 47%);
 }
 
 /* work-sans-latin-wght-normal */
@@ -31,8 +31,7 @@ body {
     background: var(--lightPink);
     background-image: url(../assets/images/background-pattern-mobile.svg);
     background-repeat: repeat-x;
-
-    
+    background-size: 400px 600px;
     height: 100%;
     align-content: center;
 }
@@ -83,16 +82,20 @@ dt {
     }
 
     &:hover {
-        color: var(--hoverFont);
+        color: var(--hoverText);
     }
 
-    &::after {
-        content: url(../assets/images/icon-plus.svg);
-     
-    }
+}
+dt::after {
+    content: url(../assets/images/icon-plus.svg);
+ 
 }
 
-.mostrar {
+dt.minus::after{
+    content: url(../assets/images/icon-minus.svg);
+}
+
+.show-hide {
     display: block;
 }
 
@@ -116,7 +119,7 @@ footer a {
     font-weight: 600;
 
     &:hover {
-        color: var(--hoverFont);
+        color: var(--hoverText);
         text-decoration: none;
     }
 }
