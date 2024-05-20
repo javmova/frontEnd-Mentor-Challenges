@@ -31,9 +31,8 @@ body {
     background: var(--lightPink);
     background-image: url(../assets/images/background-pattern-mobile.svg);
     background-repeat: repeat-x;
-    /* background-position:  center 20%; */
-    /* background-size: 500px; */
-    /*TODO: poner la rparte de arriba del fondo la imagen y la parte de abajo el color*/
+
+    
     height: 100%;
     align-content: center;
 }
@@ -55,7 +54,6 @@ h2 {
     font-weight: 700;
 
     &::before {
-        /* content: url(../assets/images/icon-star.svg); */
         content: "";
         background-image: url(../assets/images/icon-star.svg);
         width: 30px;
@@ -74,11 +72,9 @@ dt {
     border-top: 1px solid var(--lightPink);
     display: flex;
     gap: 24px;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-
     padding-top: 24px;
-    /* padding-right: 56px; */
     margin-top: 24px;
     cursor: pointer;
 
@@ -92,11 +88,7 @@ dt {
 
     &::after {
         content: url(../assets/images/icon-plus.svg);
-        /* position: absolute;
-        right: 0;
-        top: 40%; */
-
-
+     
     }
 }
 
@@ -105,7 +97,7 @@ dt {
 }
 
 dd {
-    /* display: none; */
+    display: none;
     line-height: 1.3em;
     margin-top: 20px;
     color: var(--grayishPurple);
@@ -114,10 +106,9 @@ dd {
 /* Feel free to remove these styles or customise in your own stylesheet 👍 */
 footer {
     margin-top: 48px;
-    /* padding: 24px; */
     font-size: 11px;
     text-align: center;
-    /* background: var(--white); */
+    
 }
 
 footer a {
