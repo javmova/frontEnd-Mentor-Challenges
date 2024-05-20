@@ -42,6 +42,7 @@ main {
     padding: 24px;
     border-radius: .5em;
     background: var(--white);
+    box-shadow: 0px 5px 20px 5px rgba(106, 74, 128, 0.15);
 }
 
 h2 {
@@ -122,4 +123,25 @@ footer a {
         color: var(--hoverText);
         text-decoration: none;
     }
+}
+
+/* ---------- Media queries ------------------ */
+
+@media (min-width: 609px)  {
+
+body{
+    background-image: url(../assets/images/background-pattern-desktop.svg);
+    background-repeat: repeat-x;
+    background-size: auto 500px;
+}
+
+main{
+    min-width:  542px;
+    padding: 38px;
+}
+
+h2{
+    font-size: 40px;
+}
+
 }
