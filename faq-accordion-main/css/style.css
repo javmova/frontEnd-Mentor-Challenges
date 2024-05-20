@@ -77,6 +77,8 @@ dt {
     padding-top: 24px;
     margin-top: 24px;
     cursor: pointer;
+    outline: none;
+    
 
     &:first-of-type {
         border-top: none;
@@ -85,8 +87,13 @@ dt {
     &:hover {
         color: var(--hoverText);
     }
+    &:focus{
+        color: var(--hoverText);
+    }
 
-}
+    }
+
+
 dt::after {
     content: url(../assets/images/icon-plus.svg);
  
@@ -124,6 +131,7 @@ footer a {
         text-decoration: none;
     }
 }
+
 
 /* ---------- Media queries ------------------ */
 
