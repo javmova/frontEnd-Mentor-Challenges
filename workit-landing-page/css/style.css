@@ -26,10 +26,7 @@ html {
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-@font-face {
-    font-family: 'f';
-    src: url(../assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
-}
+
 
 :root {
     --darkPurple: #24053E;
@@ -51,26 +48,17 @@ body {
 
 .container {
     width: 375px;
-    margin: auto;
+    margin: 64px auto;
     background: var(--white);
-  
+    
 
 }
 
 
 
-.expansion-articles{
-    /* display: block; */
-    transform: translateY(-255%);
-    background: var(--ghostWhite);
-    width: 375px;
-    height: 150px;
-    clip-path: ellipse(375px 90px at 50% 30%);
-    position: relative;
-   
-    z-index: 2;
-    /* border: 1px solid var(--darkPurple); */
-}
+/*--------- Header  ---------------*/
+
+
 
 header {
     background: var(--darkPurple);
@@ -80,7 +68,6 @@ header {
     margin: auto;
     position: relative;
  
-    /* border-radius: 0 0em 500em 500em; */
 
 }
 
@@ -90,8 +77,6 @@ header {
     width: 375px;
     height: 150px;
     background: var(--darkPurple);
-    /* clip-path: xywh(round 0% 25px 275px 450px);
-    clip-path: inset(0 0 0 0 round 0 0 100px 100px); */
     clip-path: ellipse(375px 90px at 50% 30%);
     position: relative;
    
@@ -114,8 +99,8 @@ header {
     background: url('../assets/images/image-hero.webp');
     background-size: 100%;
     background-repeat: no-repeat;
-    transform: translateY(-50%);
     position: relative;
+    margin-top: -107px;
     z-index: 3;
     
 }
@@ -133,17 +118,16 @@ nav {
     text-underline-offset: 8px;
 }
 
+nav .underline:hover{
+    color: var(--eucaplptus);
+}
+
 h1,
 h2,
 h3,
 article span {
     font-family: 'Fraunces Variable';
     text-align: center;
-
-    /* transform: scaleY(1.2); */
-    /* word-spacing: -20px; */
-    /* letter-spacing: -px; */
-
 
 }
 
@@ -163,7 +147,6 @@ h3 {
     color: var(--darkPurple);
     margin-top: 24px;
     margin-bottom: 16px;
-    letter-spacing: -1px;
 }
 
 .btn {
@@ -174,11 +157,16 @@ h3 {
     text-align: center;
     font-size: 16px;
     font-weight: bold;
- 
-
-
+    
+    &:hover{
+        background: var(--darkPurple);
+        color: var(--eucaplptus);
+        outline: 1px solid var(--eucaplptus);
+    }
 }
 
+
+/*--------------- artcicles----------*/
 
 .articles {
     padding: 214px 16px 16px 16px;
@@ -186,9 +174,10 @@ h3 {
     text-align: center;
     color: var(--davy´sGrey);
     margin-bottom: 100px;
-    transform: translateY(-25%);
+    margin-top: -170px;
     z-index: 1;
     position: relative;
+   
    
 
 }
@@ -202,23 +191,31 @@ article span{
     font-size: 20px;
     font-weight: 500;
     color: var(--darkPurple);
-    width: 40px;
-    height: 40px;
-    margin: auto;
     padding: 10px 18.5px;
     border: 1px solid var(--davy´sGrey);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 100%;
+    display: inline-block;
 }
 
+.expansion-articles{
+   
+    background: var(--ghostWhite);
+    width: 375px;
+    height: 150px;
+    clip-path: ellipse(375px 90px at 50% 30%);
+    position: relative;
+    margin-top: -120px;
+    z-index: 2;
   
+   
+}
+
+/*----------Call to action---------*/
 
 .call-to-action {
   
     position: relative;
-    transform: translateY(-55%);
+    margin: auto 16px;
 }
 
 .call-to-action-img{
@@ -227,9 +224,9 @@ article span{
 
 .call-to-action img {
     width: 80%;
-    transform: translateY(21%);
     z-index: 1;
     position: relative;
+    top: 64px;
     margin: auto;
 }
 
@@ -258,9 +255,16 @@ article span{
     font-weight: normal;
 }
 
+/* ------------- footer --------------*/
+
 footer {
+   
+    position: relative;
     margin-top: 74px;
-    transform: translateY(-300%);
+    padding-bottom: 64px;
+  
+    
+
 }
 
 footer nav {
@@ -274,8 +278,14 @@ footer nav {
     margin-top: 58px;
     width: 100%;
     text-align: center;
-
+    
     a {
         padding: 10px;
+        
     }
 }
+
+.social-networks img:hover{
+    filter:   brightness(0%) ;
+}
+
