@@ -73,7 +73,7 @@ header {
 
 
 .expansion{
-    content: " ";
+   
     width: 375px;
     height: 150px;
     background: var(--darkPurple);
@@ -91,8 +91,7 @@ header {
 }
 
 .mobile{
-    content: " ";
-    display: block;
+    
     width: 320px;
     height: 184px;
     margin: auto;
@@ -101,7 +100,7 @@ header {
     background-repeat: no-repeat;
     position: relative;
     margin-top: -107px;
-    z-index: 3;
+    z-index: 5;
     
 }
 
@@ -289,3 +288,175 @@ footer nav {
     filter:   brightness(0%) ;
 }
 
+
+
+/*------------------------ Media queries ------------ */
+
+@media (min-width: 798px){
+   
+    .container{
+        width: 768px;
+    }
+    
+    /*--- Querie tablet: header amd expansion-articles ---*/
+
+    header{
+        width: 100%;
+    }
+
+    .expansion, .expansion-articles{
+        
+        width: 768px;
+        clip-path: ellipse( 550px 90px at 50% 25%);
+        
+    }
+
+    header{
+        padding: 40px 32px; 
+    }
+
+    header h1{
+       padding-left: 25px;
+       padding-right: 25px;
+    }
+
+    .mobile{
+        width: 514px;
+        height: 296px;
+        top: -56px;
+        
+      
+    }
+
+    header{
+        overflow: hidden;
+    }
+
+    header::before{
+        content: " ";
+        width: 100%;
+        height: 100%;
+        background: url(../assets/images/bg-pattern-1.svg);
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 80px;
+        left: -232px;
+      
+
+    }
+
+    header::after{
+        content: " ";
+        width: 100%;
+        height: 100%;
+        background: url(../assets/images/bg-pattern-2.svg) no-repeat;
+        position: absolute;
+        right: -700px;
+        bottom: -210px;
+       
+    }
+
+    header .btn{
+        z-index: 5000;
+    }
+
+    /*-------- Queries articles tablet--------*/
+
+    .articles{
+        z-index: 1;
+       margin-top: -240px;
+       padding-left: 96px;
+       padding-right: 96px;
+    }
+    
+    
+    article{
+        margin: auto;
+        padding: auto;
+        display: grid;
+       
+        grid-template-areas:    
+        "enumeration heading"
+        "enumeration paragraph";
+        align-items: center;
+        margin-bottom: 48px;
+       
+
+        
+
+       
+    }
+
+    article span{
+        width: 50px;
+        height: 50px;
+        grid-area: enumeration;
+        position: absolute;
+       
+  
+   
+    }
+
+    article h3, article p{
+        text-align: left;
+        margin-left: 82px;
+    }
+
+    /*TODO: borrar backgrounds*/
+
+ 
+    article h3{
+    
+        grid-area: heading;
+        margin-bottom: 16px;
+    }
+    article p{
+        text-wrap: pretty;
+        grid-area:paragraph;
+        
+        
+    }
+
+    /*------- Call to action ------*/
+
+  
+    
+    .call-to-action-img{
+        width: 281px;
+    }
+    
+    .call-to-action-text{
+        
+        width: 514px;
+        margin-left: 164px;
+        margin-top: -48px;
+        text-align: left;
+        padding: 48px 56px;
+        font-size: 16px;
+        position: relative;
+       
+    }
+
+    .call-to-action-text::after{
+        content: " ";
+        width: 100%;
+        height: 100%;
+        background: url(../assets/images/bg-pattern-3.svg) no-repeat;
+        position: absolute;
+        top: 200px;
+        left: 280px;
+        
+    }
+
+    .call-to-action h2{
+        text-align: left;
+        font-size: 48px;
+        margin-bottom: 24px;
+    }
+
+    .call-to-action p{
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+
+}
