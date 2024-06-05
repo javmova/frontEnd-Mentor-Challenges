@@ -302,35 +302,31 @@ footer nav {
 
     header{
         width: 100%;
+        
+        padding: 40px 32px 70px 32px; 
+        overflow: hidden;
+        z-index: 3;
+       
     }
 
     .expansion, .expansion-articles{
         
         width: 768px;
         clip-path: ellipse( 550px 90px at 50% 25%);
+        z-index: 2;
         
     }
 
-    header{
-        padding: 40px 32px; 
-    }
+  
 
     header h1{
        padding-left: 25px;
        padding-right: 25px;
     }
 
-    .mobile{
-        width: 514px;
-        height: 296px;
-        top: -56px;
-        
-      
-    }
 
-    header{
-        overflow: hidden;
-    }
+
+  
 
     header::before{
         content: " ";
@@ -352,12 +348,22 @@ footer nav {
         background: url(../assets/images/bg-pattern-2.svg) no-repeat;
         position: absolute;
         right: -700px;
-        bottom: -210px;
+        bottom: -200px;
        
     }
 
     header .btn{
         z-index: 5000;
+    }
+
+
+
+    .mobile{
+        width: 514px;
+        height: 296px;
+        top: -56px;
+        
+      
     }
 
     /*-------- Queries articles tablet--------*/
@@ -402,10 +408,8 @@ footer nav {
         margin-left: 82px;
     }
 
-    /*TODO: borrar backgrounds*/
-
- 
-    article h3{
+   
+     article h3{
     
         grid-area: heading;
         margin-bottom: 16px;
@@ -417,7 +421,7 @@ footer nav {
         
     }
 
-    /*------- Call to action ------*/
+    /*------- Call to action: tablet ------*/
 
   
     
@@ -460,3 +464,27 @@ footer nav {
     }
 
 }
+
+@media  (min-width: 1550px){
+ 
+    .container{
+        width: 1440px;
+    }
+
+    header{
+        padding: 56px 165px;
+    }
+
+    .expansion, .expansion-articles{
+        width: 100%;
+        clip-path: ellipse( 1000px 90px at 50% 25%);
+    }
+
+    header::after{
+        left: 0;
+        margin-left: 1500px;
+
+    }
+
+}
+
