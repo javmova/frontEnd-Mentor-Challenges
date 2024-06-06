@@ -54,7 +54,7 @@ body {
 
 
 
-/*--------- Header  ---------------*/
+/*--------------- Header  ---------------*/
 
 
 
@@ -75,6 +75,7 @@ header {
     clip-path: ellipse(375px 90px at 50% 30%);
     position: relative;
     z-index: 2;
+    margin-top: -5px;
 }
 
 .container-h1-learnMore {
