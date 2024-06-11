@@ -1,47 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Results summary component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+
 </head>
+
 <body>
 
-  Your Result
-  76
-  of 100
+  <div class="container">
+    <header class="header">
+      <h2 class="header__heading-two">Your Result</h2>
+      <div class="header__score">
+        76
+        <span class=header_font-regular>of 100</span>
+      </div>
+      <h3 class="header__heading-three">Great</h3>
+      <p class="header__paragraph">You scored higher than 65% of the people who have taken these tests.</p>
+    </header>
 
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
+    <main class="main">
+      <h2 class="main__heading-two">Summary</h2>
+      <ul class="list">
+        <li class="list__item list__item_reaction">
+          Reaction
+          80 <span class="list_font-regular">/ 100</span>
+        </li>
+        <li class="list__item list__item_memory">
+          Memory
+          92 <span class="list_font-regular">/ 100</span>
+        </li>
+        <li class="list__item list__item_verbal">
+          Verbal
+          61 <span class="list_font-regular">/ 100</span>
+        </li>
+        <li class="list__item list__item_visual">
+          Visual
+          72 <span class="list_font-regular">/ 100</span>
+        </li>
+      </ul>
+      <a href="#" class="main__button">Continue</a>
+    </main>
 
-  Reaction
-  80 / 100
-
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <footer class="footer">
+      Challenge by <a class="footer__anchor" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a class="footer__anchor" href="https://github.com/javmova">Javier Molina</a>.
+    </footer>
   </div>
 </body>
+
 </html>
