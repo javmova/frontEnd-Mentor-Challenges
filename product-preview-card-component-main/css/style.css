@@ -1,0 +1,225 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* montserrat-latin-wght-normal */
+@font-face {
+    font-family: 'Montserrat Variable';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/montserrat:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+  }
+
+  /* fraunces-latin-wght-normal */
+@font-face {
+    font-family: 'Fraunces Variable';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/fraunces:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+  }
+
+
+:root{
+    --primary-dark-cyan: hsl(158, 36%, 37%);
+    --primary-cream: hsl(30, 38%, 92%);
+
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+    --active-cyan: hsl(156, 29%, 24%);
+}
+
+html{
+    height: 100dvh;
+    height: 100vh;
+}
+
+body{
+    background: var(--primary-cream);
+    height: 100%;
+    align-content: center;
+    font-family: 'Montserrat Variable';
+    font-weight: 500;
+}
+
+.container{
+    max-width: 342px;
+    margin: auto;
+    overflow: hidden;
+    background: var(--white);
+    border-radius: .5em;
+
+}
+
+
+
+header img{
+    width: 100%;
+}
+
+header h1{
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--dark-grayish-blue);
+    margin: 24px 0 0 28px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+main{
+    padding: 24px;
+    padding-top: 10px;
+}
+
+main h2{
+    font-family: 'Fraunces Variable';
+    font-weight: 700;
+    font-size: 32px;
+    
+}
+
+main p{
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--dark-grayish-blue);
+    line-height: 1.75em;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.price-container{
+    display: flex;
+    align-items: center;
+    
+}
+
+main span{
+    color: var(--primary-dark-cyan);
+    font-family: 'Fraunces Variable';
+    font-size: 32px;
+    font-weight: 700;
+}
+
+main del{
+    margin-left: 20px;
+}
+
+main del{
+    font-family: 'Fraunces Variable';
+    color: var(--dark-grayish-blue);
+    font-size: 14px;
+    
+}
+
+main button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+    background: var(--primary-dark-cyan);
+    padding: 15px;
+    color: var(--white);
+    border-radius: .5em;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+main button:hover{
+    background: var(--active-cyan);
+}
+
+
+footer{
+    margin-top: 24px;
+    font-size: 11px; text-align: center; 
+  
+}
+
+footer a{
+    color: var(--primary-dark-cyan);
+    
+}
+
+footer a:hover{
+    text-decoration: none;
+    color: var(--active-cyan);
+}
+
+@media (min-width: 1440px){
+    .container{
+       max-width: 600px;
+       display: grid;
+       grid-template-areas: "image headOne"
+                            "image headTwo"
+                            "image description"
+                            "image prices"
+                            "image cta";
+                        
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr ;
+    }
+
+    .container-img{
+        max-width: 600px;
+        grid-area: image;
+    }
+
+    header img{
+        width: 100%;
+        height: 100%;
+    }
+
+    header{
+        display: contents;
+    }
+
+    header h1{
+        grid-area: headOne;
+        margin-top: 35px;
+        margin-left: 32px;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 5px;
+        
+      
+    }
+
+    main{
+        
+        padding: 32px;
+    }
+
+    main h2{
+        grid-area: headTwo;
+        margin-top: 0px;
+    }
+    
+    main p{
+        grid-area: description;
+        font-size: 14px;
+
+    }
+
+    main .price-container{
+        grid-area: prices;
+    }
+
+    main button{
+        grid-area: cta;
+        padding: 16px 60px;
+    }
+}
+
+
+
