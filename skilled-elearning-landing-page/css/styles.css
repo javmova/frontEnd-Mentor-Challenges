@@ -43,7 +43,6 @@
 
 .text-preset-1{
     font-family: 'Plus Jakarta Sans Variable';
- 
     font-size: 40px;
     line-height: 120%;
     letter-spacing: 0px;
@@ -148,7 +147,7 @@ nav a{
     
 }
 
-header >a{
+header .header-hero a{
     display: inline-block;
     text-decoration: none;
     padding: 16px 32px;
@@ -160,18 +159,25 @@ header >a{
     margin-bottom: 48px;
 }
 
-header a:hover::before,
-header >a:hover::before{
-    background: rgba(255, 255,255 , .5);
+header a::before,
+header .header-hero a::before{
     position: absolute;
     top: 0;
     left: 0;
     content: "Get Started";
     border-radius: 28px;
-    
     padding: 16px 32px;
+    transition: 300ms;
     
 }
+
+header a:hover::before,
+header .header-hero a:hover::before{
+    background: rgba(255, 255,255 , .5);
+
+}
+
+
 
 
 
@@ -217,6 +223,7 @@ main p{
 main a{
     text-decoration: none;
     color: var(--Pink-600);
+    transition: 1s;
    
 }
 
@@ -242,21 +249,117 @@ footer a{
     color: var(--White);
     border-radius: 28px;
     position: relative;
+   
 }
 
-footer a:hover::before{
-    background: rgba(255, 255,255 , .5);
+footer a::before{
     position: absolute;
     top: 0;
     left: 0;
     content: "Get Started";
     border-radius: 28px;
     padding: 10px 24px;
-
+    transition: .3s;
+    
 }
+
+footer a:hover::before{
+    background: rgba(255, 255,255 , .5);
+    
+}
+
 
 footer svg{
     max-width: 79.29px;
 }
 
 
+/*----------------------------------------    Media queries    ---------------------------------------*/
+
+@media (min-width:799px) {
+ 
+    .container{
+        max-width: 768px;
+        overflow: hidden;
+    }
+
+ 
+    header{
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+
+    nav{
+        padding-left: 44px;
+        padding-right: 44px;
+    }
+ 
+    nav a{
+        padding: 10px 24px;
+        z-index: 1000;
+    }
+
+
+    header .header-hero{
+        display: grid;
+        gap: 24px;
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+        padding-left: 44px;
+      
+    }
+  
+
+
+    header .header-hero a{
+        padding: 10px 24px;
+        
+    }
+
+    header a::before,
+    header .header-hero a::before{
+        padding: 10px 24px;
+    }
+
+    header a:hover::before,
+    header .header-hero a:hover::before{
+        padding: 10px 24px;
+    }
+
+    .container-img-header{
+        
+        position: absolute;
+        bottom: -100px;
+        right: -300px;
+       
+    }
+
+   
+
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 64px 44px 144px 44px;
+        gap: 24px;
+        margin: auto;
+    }
+    
+    main h2{
+        width: 328px;
+        height: 322px;
+    }
+
+    article{
+        width: 328px;
+    }
+
+    main article:last-child{
+        margin-bottom: 0;
+    }
+
+    footer{
+        padding: 24px 44px;
+    }
+
+}
